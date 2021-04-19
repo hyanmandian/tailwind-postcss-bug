@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+.normal {
+  @apply bg-green-200;
+}
+
+@define-mixin working-mixin {
+  .some-class {
+    @apply bg-green-200;
+  }
+}
+
+.work { @mixin working-mixin; }
+
+@define-mixin not-working-mixin {
+  @apply bg-green-200;
+}
+
+.dont-work { @apply dont-work; }
