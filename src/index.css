@@ -13,7 +13,16 @@
   }
 }
 
-.work { @mixin working-mixin; }
+@define-mixin another-working-mixin {
+  & {
+    @apply bg-green-200;
+  }
+}
+
+.work {
+  @mixin working-mixin;
+  @mixin another-working-mixin;
+}
 
 @define-mixin not-working-mixin {
   @apply bg-green-200;
