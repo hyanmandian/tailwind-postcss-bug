@@ -19,4 +19,4 @@
   @apply bg-green-200;
 }
 
-.dont-work { @apply dont-work; }
+.dont-work { @mixin dont-work; }
